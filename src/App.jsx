@@ -1,15 +1,20 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { fetchDataFromApi } from './utils/api';
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  useEffect(() => {
+    apiTesting();
+  }, []);
+
+  const apiTesting = () => {
+    fetchDataFromApi('/movie/popular').then((res) => console.log(res));
+  };
 
   return (
-    <div className='App'>
+    <div className='App' style={{ color: 'white' }}>
       <h2>Let's Build this App</h2>
     </div>
   );
-}
+};
 
 export default App;

@@ -18,3 +18,5 @@
 "react-select": "^5.7.0",
 "sass": "^1.57.1"
 }
+
+### 2 - Working with TMDB API and setting API Function
